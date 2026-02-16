@@ -33,7 +33,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header id="home" class="bg-base-100 shadow-sm">
+    <header class="bg-base-100 shadow-sm sticky top-0 z-30">
       <!-- Navbar -->
       <div class="navbar max-w-screen-xl mx-auto p-0">
         <div class="navbar-start">
@@ -65,7 +65,7 @@
             >
               <li>
                 <a
-                  href="#home"
+                  href="#"
                   class="text-primary hover:text-secondary text-base font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
                   >Home</a
                 >
@@ -110,7 +110,7 @@
           <ul class="menu menu-horizontal px-1">
             <li>
               <a
-                href="#home"
+                href="#"
                 class="text-primary hover:text-secondary text-base font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
                 >Home</a
               >
@@ -402,7 +402,173 @@
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer class="bg-black/90 pb-5">
+      <!-- FooterContainer -->
+      <div
+        class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10 px-4 lg:px-0"
+      >
+        <!-- FooterContent - 1 -->
+        <div>
+          <!-- Logo -->
+          <div>
+            <a
+              href="#"
+              class="hover:scale-110 transition-transform duration-300 p-0"
+            >
+              <span
+                class="text-primary hover:text-secondary transition-colors duration-300 text-xl font-bold"
+              >
+                SwiftCart
+              </span>
+            </a>
+          </div>
+          <!-- Content -->
+          <p class="mt-3 text-white/70 text-sm">
+            Your trusted shopping destination for all your needs. Quality
+            products, fast delivery and excellent customer service.
+          </p>
+        </div>
+
+        <!-- FooterContent - 2 -->
+        <div>
+          <h5 class="text-white font-bold uppercase">Quick Links</h5>
+          <!-- Links -->
+          <div class="mt-3">
+            <ul>
+              <li>
+                <a
+                  href="#home"
+                  class="text-white/70 hover:text-secondary text-sm font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-white/70 hover:text-secondary text-sm font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#products"
+                  class="text-white/70 hover:text-secondary text-sm font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-white/70 hover:text-secondary text-sm font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FooterContent - 3 -->
+        <div>
+          <h5 class="text-white font-bold uppercase">Support</h5>
+          <!-- Links -->
+          <div class="mt-3">
+            <ul>
+              <li>
+                <a
+                  href="#faq"
+                  class="text-white/70 hover:text-secondary text-sm font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#shipping"
+                  class="text-white/70 hover:text-secondary text-sm font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
+                  >Shipping Info</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#returns"
+                  class="text-white/70 hover:text-secondary text-sm font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
+                  >Returns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#privacy"
+                  class="text-white/70 hover:text-secondary text-sm font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FooterContent - 4 -->
+        <div>
+          <h5 class="text-white font-bold uppercase">
+            Subscribe to our newsletter
+          </h5>
+          <p class="mt-2 text-white/70 text-sm">
+            Get the latest news and updates delivered straight to your inbox.
+          </p>
+          <!-- Form -->
+          <fieldset class="w-full mt-3">
+            <div class="join">
+              <input
+                type="text"
+                placeholder="Enter your email"
+                class="input input-bordered join-item"
+              />
+              <button
+                class="btn bg-primary text-white join-item hover:bg-secondary transition-colors duration-300"
+              >
+                Subscribe
+              </button>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        class="max-w-screen-xl mx-auto footer sm:footer-horizontal text-neutral-content items-center justify-center md:justify-between border-t pt-10 pb-5 px-4 lg:px-0"
+      >
+        <aside class="grid-flow-col items-center">
+          Copyright © <span id="year"></span> - All rights reserved
+        </aside>
+        <nav
+          class="grid-flow-col gap-8 md:place-self-center md:justify-self-end mx-auto md:mx-0"
+        >
+          <a href="" class="text-xl">
+            <i
+              class="fa-brands fa-facebook-f text-white/70 hover:text-secondary transition-colors duration-300"
+            ></i>
+          </a>
+          <a href="" class="text-xl">
+            <i
+              class="fa-brands fa-twitter text-white/70 hover:text-secondary transition-colors duration-300"
+            ></i>
+          </a>
+          <a href="" class="text-xl">
+            <i
+              class="fa-brands fa-instagram text-white/70 hover:text-secondary transition-colors duration-300"
+            ></i>
+          </a>
+          <a href="" class="text-xl">
+            <i
+              class="fa-brands fa-linkedin text-white/70 hover:text-secondary transition-colors duration-300"
+            ></i>
+          </a>
+          <a href="" class="text-xl">
+            <i
+              class="fa-solid fa-envelope-open text-white/70 hover:text-secondary transition-colors duration-300"
+            ></i>
+          </a>
+        </nav>
+      </div>
+    </footer>
 
     <!-- TailwindCSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>

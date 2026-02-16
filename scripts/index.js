@@ -1,1 +1,2 @@
-// alert("Script connected!")
+// SetCurrentYear
+document.getElementById("year").textContent = new Date().getFullYear();
