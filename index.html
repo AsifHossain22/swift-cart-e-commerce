@@ -33,13 +33,17 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="bg-base-100 shadow-sm">
+    <header id="home" class="bg-base-100 shadow-sm">
       <!-- Navbar -->
-      <div class="navbar max-w-screen-xl mx-auto">
+      <div class="navbar max-w-screen-xl mx-auto p-0">
         <!-- MobileNavbar -->
         <div class="navbar-start">
           <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn bg-transparent border-none shadow-none lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -60,59 +64,85 @@
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a href="#home">Home</a>
+                <a
+                  href="#home"
+                  class="text-primary hover:text-secondary transition-colors duration-300"
+                  >Home</a
+                >
               </li>
               <li>
-                <a href="#products">Products</a>
+                <a
+                  href="#products"
+                  class="text-primary hover:text-secondary transition-colors duration-300"
+                  >Products</a
+                >
               </li>
               <li>
-                <a href="#about">About</a>
+                <a
+                  href="#about"
+                  class="text-primary hover:text-secondary transition-colors duration-300"
+                  >About</a
+                >
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a
+                  href="#contact"
+                  class="text-primary hover:text-secondary transition-colors duration-300"
+                  >Contact</a
+                >
               </li>
             </ul>
           </div>
           <!-- Logo -->
-          <a href="#" class="hover:scale-110 transition-transform duration-300">
-            <span class="text-primary text-xl font-bold">SwiftCart</span>
+          <a
+            href="#"
+            class="hover:scale-110 transition-transform duration-300 p-0"
+          >
+            <span
+              class="text-primary hover:text-secondary transition-colors duration-300 text-xl font-bold"
+              >SwiftCart</span
+            >
           </a>
         </div>
+
+        <!-- DesktopNavbar -->
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
             <li>
               <a
                 href="#home"
-                class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300"
+                class="text-primary hover:text-secondary text-base font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="#products"
-                class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300"
+                class="text-primary hover:text-secondary text-base font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
                 >Products</a
               >
             </li>
             <li>
               <a
                 href="#about"
-                class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300"
+                class="text-primary hover:text-secondary text-base font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300"
+                class="text-primary hover:text-secondary text-base font-medium hover:bg-transparent hover:scale-110 transition-all duration-300"
                 >Contact</a
               >
             </li>
           </ul>
         </div>
+
+        <!-- CartButtonIcon -->
         <div class="navbar-end">
           <button
-            class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300 cursor-pointer px-4 lg:px-0"
+            class="text-primary hover:text-secondary text-base font-medium hover:bg-transparent hover:scale-110 transition-all duration-300 cursor-pointer px-4 lg:px-0"
           >
             <i class="fa-solid fa-shopping-cart"></i>
           </button>
@@ -121,7 +151,32 @@
     </header>
 
     <!-- Main -->
-    <main></main>
+    <main>
+      <!-- BannerSection -->
+      <section id="banner" class="min-h-[90vh]">
+        <!-- Content -->
+        <div
+          class="max-w-screen-xl mx-auto flex items-center h-[90vh] relative z-10"
+        >
+          <div>
+            <h1 class="text-5xl font-bold text-white">
+              Best Collection For You
+            </h1>
+            <p class="w-8/12 text-lg text-white/70 mt-4">
+              Discover the latest trends in men's fashion. Shop with confidence
+              and style at SwiftCart.
+            </p>
+            <button
+              class="bg-primary hover:bg-secondary px-6 py-3 rounded mt-6 transition-colors duration-300 cursor-pointer text-white"
+            >
+              Shop Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!--  -->
+    </main>
 
     <!-- Footer -->
     <footer></footer>
