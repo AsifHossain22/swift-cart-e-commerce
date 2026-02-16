@@ -1,27 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SiteTitle -->
     <title>SwiftCart E-Commerce</title>
 
-    <!-- StyleSheet -->
-     <link rel="stylesheet" href="./styles/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./" type="image/x-icon" />
 
-     <!-- DaisyUI -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    
-    <h1 class="text-7xl font-bold text-center">
-        Mission 1 - Started
-    </h1>
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- GoogleFonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-base-100 shadow-sm">
+      <!-- Navbar -->
+      <div class="navbar max-w-screen-xl mx-auto">
+        <!-- MobileNavbar -->
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#products">Products</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Logo -->
+          <a href="#" class="hover:scale-110 transition-transform duration-300">
+            <span class="text-primary text-xl font-bold">SwiftCart</span>
+          </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <a
+                href="#home"
+                class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#products"
+                class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <button
+            class="text-text-secondary text-base font-medium hover:text-primary hover:bg-transparent hover:scale-110 transition-all duration-300 cursor-pointer px-4 lg:px-0"
+          >
+            <i class="fa-solid fa-shopping-cart"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main></main>
+
+    <!-- Footer -->
+    <footer></footer>
 
     <!-- TailwindCSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- ScriptSheet -->
     <script src="./scripts/index.js"></script>
-</body>
+  </body>
 </html>

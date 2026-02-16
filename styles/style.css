@@ -1,4 +1,12 @@
-/* body{
-    background-color: cyan;
-    color: gray;
-} */
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7a1cac;
+  --color-secondary: #2e073f;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #f0f0f0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
