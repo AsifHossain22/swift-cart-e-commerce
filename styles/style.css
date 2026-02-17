@@ -35,3 +35,8 @@ input:focus {
   box-shadow: none;
   border: none;
 }
+
+.active-nav {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
