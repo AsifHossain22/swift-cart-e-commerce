@@ -179,5 +179,10 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// ShopNow
+function shopNow() {
+  window.location.href = "../products.html";
+}
+
 // LoadProductsOnPageLoad
 loadProducts();
