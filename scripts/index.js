@@ -6,6 +6,11 @@ const capitalizedCategoryName = (word) => {
   return word.charAt(0).toUpperCase() + word.slice(1);
 };
 
+// SetActiveClassToAllProductsButtonOnPageLoad
+window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("allProductsBtn").classList.add("active");
+});
+
 // LoadProductCategoryLevels
 const loadProductCategoryLevels = () => {
   const url = "https://fakestoreapi.com/products/categories";
@@ -25,7 +30,9 @@ const displayProductCategoryLevels = (categories) => {
   );
 
   // ClearPreviousCategories
-  productCategoryLevelsContainer.innerHTML = "";
+  productCategoryLevelsContainer
+    .querySelectorAll(".category-btn")
+    .forEach((btn) => btn.remove());
 
   // GetProductCategoryLevels
   categories.map((category) => {
@@ -34,7 +41,7 @@ const displayProductCategoryLevels = (categories) => {
 
     // SetProductCategoryLevel
     productCategoryLevel.innerHTML = `
-    <button class="bg-transparent hover:bg-primary border-2 border-primary text-primary hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 cursor-pointer"
+    <button class="bg-transparent hover:bg-primary border-2 border-primary text-primary hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 cursor-pointer category-btn"
     >
         ${capitalizedCategoryName(category)} 
     </button>
@@ -123,6 +130,54 @@ const displayProducts = (products) => {
     productsContainer.append(productItem);
   });
 };
+
+// GetProductsByCategory
+const getProductsByCategory = (category) => {
+  const url = `https://fakestoreapi.com/products/category/${category}`;
+
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => displayProducts(data)); // DisplayProductsByCategory
+};
+
+// DisplayProductsByCategory
+const displayProductsByCategory = (category) => {
+  getProductsByCategory(category);
+};
+
+// DisplayAllProductsOnAllButtonClick
+document.getElementById("allProductsBtn").addEventListener("click", () => {
+  // RemoveActiveCategoryClassFromAllButtons
+  document.querySelectorAll(".category-btn").forEach((btn) => {
+    btn.classList.remove("active");
+  });
+
+  // Set All button active
+  document.getElementById("allProductsBtn").classList.add("active");
+
+  // LoadProductsOnPageLoad
+  loadProducts();
+});
+
+// DisplayCategoryProductsOnCategoryButtonClick
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("category-btn")) {
+    // RemoveActiveClassFromAllButtons
+    document.getElementById("allProductsBtn").classList.remove("active");
+    document
+      .querySelectorAll(".category-btn")
+      .forEach((btn) => btn.classList.remove("active"));
+
+    // SetActiveClassToClickedCategoryButton
+    event.target.classList.add("active");
+
+    // DisplayClickedCategoryProducts
+    const category = event.target.textContent.trim().toLowerCase();
+
+    // DisplayProductsByCategory
+    displayProductsByCategory(category);
+  }
+});
 
 // LoadProductsOnPageLoad
 loadProducts();

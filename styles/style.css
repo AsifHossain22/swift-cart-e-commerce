@@ -40,3 +40,10 @@ input:focus {
   color: var(--color-secondary);
   font-weight: 600;
 }
+
+.allProductsBtn.active,
+.category-btn.active {
+  background-color: var(--color-primary); /* Tailwind primary color */
+  color: white;
+  border-color: var(--color-primary);
+}
