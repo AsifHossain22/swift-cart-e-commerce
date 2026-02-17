@@ -1,6 +1,11 @@
 // SetCurrentYear
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// CapitalizeCategoryName'sFirstLetter
+const capitalizedCategoryName = (word) => {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+};
+
 // LoadProductCategoryLevels
 const loadProductCategoryLevels = () => {
   const url = "https://fakestoreapi.com/products/categories";
@@ -22,11 +27,6 @@ const displayProductCategoryLevels = (categories) => {
   // ClearPreviousCategories
   productCategoryLevelsContainer.innerHTML = "";
 
-  // CapitalizeCategoryName'sFirstLetter
-  const capitalizedCategoryName = (word) => {
-    return word.charAt(0).toUpperCase() + word.slice(1);
-  };
-
   // GetProductCategoryLevels
   categories.map((category) => {
     // CreateProductCategoryLevel
@@ -47,3 +47,82 @@ const displayProductCategoryLevels = (categories) => {
 
 // LoadProductCategoryLevelsOnPageLoad
 loadProductCategoryLevels();
+
+// LoadProducts
+const loadProducts = () => {
+  const url = "https://fakestoreapi.com/products";
+
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => displayProducts(data));
+};
+
+// DisplayProducts
+const displayProducts = (products) => {
+  // console.log(products); // DisplayedProductsSuccessfully
+
+  // GetProductsContainer
+  const productsContainer = document.getElementById("productsContainer");
+
+  // ClearPreviousProducts
+  productsContainer.innerHTML = "";
+
+  // GetProducts
+  products.map((product) => {
+    // CreateProductItem
+    const productItem = document.createElement("div");
+
+    // SetProductItem
+    productItem.innerHTML = `
+    <div class="shadow-md p-6 rounded-lg hover:shadow-lg transition-shadow duration-300">
+        <!-- ProductImage -->
+        <div>
+            <img
+                src="${product.image}"
+                alt="Product Image"
+                class="w-full h-60 object-cover rounded-lg"
+            />
+        </div>
+
+        <!-- ProductCategoryAndRatings -->
+        <div class="flex justify-between mt-4">
+            <span
+                class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
+            >
+                ${capitalizedCategoryName(product.category)}
+            </span>
+            <!-- Badge -->
+            <p>
+                <span class="text-orange-300">★</span> ${product.rating.rate}
+            </p>
+        </div>
+
+        <!-- ProductTitle -->
+        <h4 class="text-black/95 font-medium mt-2">${product.title}</h4>
+
+        <!-- ProductPrice -->
+        <p class="text-black/95 font-bold mt-1">${product.price}</p>
+
+        <!-- ProductButtons -->
+        <div class="flex justify-between">
+            <button
+                class="bg-white border-2 border-black/50 hover:border-transparent hover:bg-secondary hover:scale-110 px-6 py-3 rounded-lg mt-6 transition-all duration-300 cursor-pointer text-black/50 hover:text-white"
+            >
+                <i class="fa-solid fa-eye"></i> Details
+            </button>
+            <button
+                class="bg-primary hover:bg-secondary hover:scale-110 px-6 py-3 rounded-lg mt-6 transition-all duration-300 cursor-pointer text-white"
+            >
+                <i class="fa-solid fa-cart-plus"></i> Add
+            </button>
+        </div>
+    </div>
+    `;
+
+    // AppendProductItemToContainer
+    productsContainer.append(productItem);
+  });
+};
+
+// LoadProductsOnPageLoad
+loadProducts();
